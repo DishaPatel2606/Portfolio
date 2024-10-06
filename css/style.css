@@ -467,7 +467,6 @@ a:focus {
     }
 }
 
-
 /*******************************/
 /********** About CSS **********/
 /*******************************/
@@ -478,7 +477,7 @@ a:focus {
 }
 
 .about .col-lg-6 {
-    padding: 0;
+    padding: 0 30px; /* Added padding on both sides */
 }
 
 .about .section-header {
@@ -534,16 +533,27 @@ a:focus {
     width: 0px;
     background: #EF233C;
     border-radius: 10px;
-    transition: 2s;
+    transition: 1s ease; /* Faster animation */
 }
 
 .about .about-text a.btn {
     margin-top: 15px;
 }
 
+/*******************************/
+/******* Media Queries *********/
+/*******************************/
 @media (max-width: 991.98px) {
+    .about .col-lg-6 {
+        padding: 15px; /* Adjusted padding for mobile */
+    }
+    
     .about .about-content {
-        padding: 45px 15px 0 15px;
+        padding: 45px 15px 0 15px; /* Adjusted padding for about content on smaller screens */
+    }
+    
+    .about .skills {
+        margin-bottom: 20px; /* Reduced margin for mobile */
     }
 }
 
