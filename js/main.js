@@ -92,6 +92,7 @@
     });
     
     
+    
     // Portfolio filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
@@ -103,15 +104,5 @@
         $(this).addClass('filter-active');
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-
-    // Portfolio Modal
-    $('.portfolio-item a').on('click', function (e) {
-        e.preventDefault(); // Prevent the default anchor click behavior
-        var projectId = $(this).data('project-id'); // Get the project ID from the data attribute
-        // Use project ID to populate the modal
-        $('#portfolioModal .modal-title').text('Project ' + projectId);
-        $('#portfolioModal .modal-body').html('<p>Description for project ' + projectId + '</p><img src="assets/img/project' + projectId + '.jpg" class="img-fluid" alt="Project ' + projectId + '">');
-        $('#portfolioModal').modal('show'); // Show the modal
-    });
-
+    
 })(jQuery);
